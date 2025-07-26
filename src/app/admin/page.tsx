@@ -169,7 +169,7 @@ const AdminPage = () => {
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="text-sm font-medium text-gray-600">Total Bookings</p>
-                            <p className="text-3xl font-bold text-luxury-dark">{stats.totalBookings}</p>
+                            <p className="text-3xl font-bold text-luxury-dark">{stats.totalBookings || 0}</p>
                           </div>
                           <Calendar className="w-8 h-8 text-luxury-gold" />
                         </div>
@@ -181,7 +181,7 @@ const AdminPage = () => {
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="text-sm font-medium text-gray-600">Total Revenue</p>
-                            <p className="text-3xl font-bold text-luxury-dark">${stats.totalRevenue.toLocaleString()}</p>
+                            <p className="text-3xl font-bold text-luxury-dark">${(stats.totalRevenue || 0).toLocaleString()}</p>
                           </div>
                           <DollarSign className="w-8 h-8 text-luxury-gold" />
                         </div>
@@ -193,7 +193,7 @@ const AdminPage = () => {
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="text-sm font-medium text-gray-600">Occupancy Rate</p>
-                            <p className="text-3xl font-bold text-luxury-dark">{stats.occupancyRate}%</p>
+                            <p className="text-3xl font-bold text-luxury-dark">{stats.occupancyRate || 0}%</p>
                           </div>
                           <TrendingUp className="w-8 h-8 text-luxury-gold" />
                         </div>
@@ -205,7 +205,7 @@ const AdminPage = () => {
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="text-sm font-medium text-gray-600">Avg Daily Rate</p>
-                            <p className="text-3xl font-bold text-luxury-dark">${stats.avgDailyRate}</p>
+                            <p className="text-3xl font-bold text-luxury-dark">${stats.avgDailyRate || 0}</p>
                           </div>
                           <Users className="w-8 h-8 text-luxury-gold" />
                         </div>
