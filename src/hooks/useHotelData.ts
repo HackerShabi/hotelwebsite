@@ -144,7 +144,18 @@ export const useBookings = (guestEmail?: string) => {
   return { bookings, loading, error, refetch: () => fetchBookings() };
 };
 
-export const createBooking = async (bookingData: any) => {
+interface BookingData {
+  guestName: string;
+  guestEmail: string;
+  guestPhone: string;
+  roomId: string;
+  checkInDate: string;
+  checkOutDate: string;
+  guests: number;
+  specialRequests?: string;
+}
+
+export const createBooking = async (bookingData: BookingData) => {
   try {
     const response = await fetch(buildApiUrl(API_CONFIG.ENDPOINTS.BOOKINGS), {
       method: 'POST',

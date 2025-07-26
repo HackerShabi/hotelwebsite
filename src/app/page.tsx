@@ -33,7 +33,7 @@ const itemVariants = {
 };
 
 // Icon mapping for services
-const iconMap: { [key: string]: any } = {
+const iconMap: { [key: string]: string | React.ComponentType } = {
   '🧘‍♀️': '🧘‍♀️',
   '🍽️': '🍽️',
   '💪': '💪',
